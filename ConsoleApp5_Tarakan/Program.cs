@@ -1,11 +1,23 @@
 ﻿class Tarakan
 {
     Random rnd = new Random();
+    private static int id;
     private static string name;
     private static string color;
     private double max_speed;
     private double stamina;
-    private bool IsDeath;
+    private int training_count;
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+        init
+        {
+            id = ;
+        }
+    }
     public string Name
     {
         get
@@ -56,34 +68,28 @@
         Color = color;
         this.max_speed = max_speed;
         this.stamina = stamina;
-        this.IsDeath = false;
+        training_count = 3;
     }
     public Tarakan(string name, int max_speed, int stamina)
     {
         Name = name;
         this.max_speed = max_speed;
         this.stamina = stamina;
+        training_count = 3;
     }
     public int Movement()
     {
-        if (IsDeath) {
-            return 0;
-        }
         int speed = rnd.Next(0, (int)this.max_speed);
-        return speed
+        return speed;
     }
     public void Training()
     {
-        if (IsDeath) {
-            Console.WriteLine($"{Name} is dead");
-        }
         int death = rnd.Next(0, 4);
         int or = rnd.Next(0, 2);
         if (death == 3)
         {
-            IsDeath = true;
             Console.WriteLine($"Таракана {Name} придавило штангой. RIP!");
-            Program.<Tarakan>.Remove(this);
+            Program.tarakan_list.Remove(this);
         }
         switch (or)
         {
@@ -96,16 +102,45 @@
                 Console.WriteLine($"Вкачали выносливость таракану {Name}, теперь stamina = {Stamina}");
                 break;
         }
+        training_count--;
     }
 }
 class Totalizator
 {
-    
+    private int balance;
+    private int bid;
+    public int Balance
+    {
+        get
+        {
+            return balance;
+        }
+        set
+        {
+            balance = value;
+        }
+    }
+    public int Bid
+    {
+        get
+        {
+            return bid;
+        }
+        set
+        {
+            bid = value;
+        }
+    }
+    public Totalizator(int balance, int bid){}
+    public void Bet()
+    {
+        
+    }
 }
 
 class Program
 {
-    public List<Tarakan> tarakan_list = new List<Tarakan>();
+    public static List<Tarakan> tarakan_list = new List<Tarakan>();
     public static void Main()
     {
         
