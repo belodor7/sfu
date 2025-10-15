@@ -13,10 +13,6 @@
         {
             return id;
         }
-        init
-        {
-            id = ;
-        }
     }
     public string Name
     {
@@ -131,7 +127,10 @@ class Totalizator
             bid = value;
         }
     }
-    public Totalizator(int balance, int bid){}
+    public Totalizator()
+    {
+        this.balance = 1000;
+    }
     public void Bet()
     {
         
@@ -143,6 +142,25 @@ class Program
     public static List<Tarakan> tarakan_list = new List<Tarakan>();
     public static void Main()
     {
-        
+        int menu;
+        Console.WriteLine("Меню:\n1. Добавить таракана\n2. Удалить таракана\n3. Показать всех тараканов\n4. Потренировать таракана\n5. Сделать ставку и запустить гонку\n6. Посмотреть состояние счета\n7. Выход");
+        menu = Convert.ToInt32(Console.ReadLine());
+        switch (menu)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+        }
     }
 }
