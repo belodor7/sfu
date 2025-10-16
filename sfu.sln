@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp5", "ConsoleApp5\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp5_Tarakan", "ConsoleApp5_Tarakan\ConsoleApp5_Tarakan.csproj", "{4A7C3A65-8865-45C0-89D4-AB67528FAA67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_tarakan_deepseel", "5_tarakan_deepseel\5_tarakan_deepseel.csproj", "{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{4A7C3A65-8865-45C0-89D4-AB67528FAA67}.Release|x64.Build.0 = Release|Any CPU
 		{4A7C3A65-8865-45C0-89D4-AB67528FAA67}.Release|x86.ActiveCfg = Release|Any CPU
 		{4A7C3A65-8865-45C0-89D4-AB67528FAA67}.Release|x86.Build.0 = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|x64.Build.0 = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Debug|x86.Build.0 = Debug|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|x64.ActiveCfg = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|x64.Build.0 = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|x86.ActiveCfg = Release|Any CPU
+		{10814BB3-DEC0-4EBD-BE24-F2332D21A24F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\bin\Debug\net9.0\ConsoleApp5_Tarakan.exe
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\bin\Debug\net9.0\ConsoleApp5_Tarakan.deps.json
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\bin\Debug\net9.0\ConsoleApp5_Tarakan.runtimeconfig.json
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\bin\Debug\net9.0\ConsoleApp5_Tarakan.dll
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\bin\Debug\net9.0\ConsoleApp5_Tarakan.pdb
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.AssemblyInfoInputs.cache
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.AssemblyInfo.cs
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.csproj.CoreCompileInputs.cache
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.sourcelink.json
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.dll
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\refint\ConsoleApp5_Tarakan.dll
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.pdb
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ConsoleApp5_Tarakan.genruntimeconfig.cache
+C:\Users\kuchm\sfu\ConsoleApp5_Tarakan\obj\Debug\net9.0\ref\ConsoleApp5_Tarakan.dll
