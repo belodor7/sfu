@@ -207,11 +207,6 @@ class Totalizator
                 max_speed = speed;
                 id_win = t.Id;
             }
-            if (t.Id == id)
-            {
-                Console.WriteLine($"Таракан {t.Name} с ID {t.Id} начал гонку!");
-                Console.WriteLine($"Скорость таракана: {Math.Round(speed, 2)}");
-            }
         }
         Console.WriteLine("### ГОНКА ЗАВЕРШЕНА! ###");
         Console.WriteLine($"Таракан с ID {id_win} выиграл гонку!");
@@ -222,8 +217,7 @@ class Totalizator
         }
         else
         {
-            Console.WriteLine("Ваша ставка не сыграла!");
-            Console.WriteLine($"Вы проиграли {bid} рублей!");
+            Console.WriteLine($"Ваша ставка не сыграла, вы проиграли {bid} рублей!");
         }
     }
     public void ShowBalance()
@@ -360,8 +354,8 @@ class Program
         {
             if (t.Id == id)
             {
-                t.Training();
                 found = true;
+                t.Training();
                 break;
             }
         }
