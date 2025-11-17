@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "LYF2m7TJTFg=",
   "success": true,
   "projectFilePath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
+=======
+  "dgSpecHash": "XcxI3PvNZrc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kuchm\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
+>>>>>>> de35fa7b979842556753115de4a5805c005871f9
   "expectedPackageFiles": [],
   "logs": []
 }
