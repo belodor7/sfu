@@ -1,15 +1,13 @@
-﻿using System.IO.Compression;
-
-class Car
+﻿class Car
 {
     private string color;
     private int avg_speed;
     public enum Brand
     {
-        BMW,
-        Toyota,
-        Lada,
-        Mercedes
+        BMW = 0,
+        Toyota = 1,
+        Lada = 2,
+        Mercedes = 3
     };
     private string direction;
     public string Color
@@ -87,5 +85,68 @@ class Car
         {
             Console.WriteLine(brand);
         }
+    }
+}
+class Program
+{
+
+
+    static void Main()
+    {
+        int menu;
+        while (true)
+        {
+            Menu();
+            menu = Convert.ToInt32(Console.ReadLine());
+            switch (menu)
+            {
+                case 1:
+                    CreateCar();
+                    break;
+                case 2:
+                    ChangeColor();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    return;
+                default:
+                    Console.WriteLine("Некорректный выбор.");
+                    break;
+            }
+        }
+    }
+    static void Menu()
+    {
+        Console.WriteLine("1. Создать машину");
+        Console.WriteLine("2. Изменить цвет машины");
+        Console.WriteLine("3. Улучшиить скорость машины");
+        Console.WriteLine("4. Получить цвет машины");
+        Console.WriteLine("5. Рассчитать пройденное расстояние");
+        Console.WriteLine("6. Изменить направление движения");
+        Console.WriteLine("7. Показать навигацию");
+        Console.WriteLine("8. Показать доступные марки машин");
+        Console.WriteLine("9. Выход");
+        Console.WriteLine("Выберите действие: ");
+        return;
+    }
+    static void CreateCar()
+    {
+
+    }
+    static void ChangeColor()
+    {
+        Console.WriteLine("Выберите новый цвет:");
+        string newColor = Console.ReadLine();
     }
 }

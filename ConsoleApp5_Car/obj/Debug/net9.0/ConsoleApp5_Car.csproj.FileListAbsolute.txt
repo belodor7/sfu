@@ -1,0 +1,5 @@
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.AssemblyInfoInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.AssemblyInfo.cs
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.csproj.CoreCompileInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.sourcelink.json
