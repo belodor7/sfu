@@ -8,7 +8,6 @@ public class Wood_Mag : Mag
     public override string AttackMessage{ get;} = "ЗАНОЗЫ";
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Dirt;
-    public override Element DeathElement{ get; init;} = Element.Metal;
     public override void Train()
     {
         Console.WriteLine("Деревянный маг не любит тренировки.");
@@ -16,5 +15,9 @@ public class Wood_Mag : Mag
     public override void ShowInfo()
     {
         base.ShowInfo();
+    }
+    public override string StrElement(Element element)
+    {
+        return base.StrElement(element);
     }
 }

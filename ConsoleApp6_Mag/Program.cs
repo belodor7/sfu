@@ -3,6 +3,7 @@
     class Program
     {
         public static Random rand = new Random();
+        public static Mag mag = new Mag();
         public static Fire_Mag fire_mag = new Fire_Mag();
         public static Wood_Mag wood_mag = new Wood_Mag();
         public static Water_Mag water_mag = new Water_Mag();
@@ -15,7 +16,10 @@
             while (true)
             {
                 Menu();
-                key = Convert.ToInt32(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out key) || key < 1 || key > 4)
+                {
+                    Console.WriteLine("Некорректный ввод. Введите число от 1 до 4.");
+                }
                 switch (key)
                 {
                     case 1:
@@ -42,10 +46,14 @@
         }
         static void Train()
         {
+            int key;
             Console.Clear();
             ShowAllMag();
             Console.WriteLine("Выберите, какого мага вы хотите потренировать");
-            int key = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out key) || key < 1 || key > 6)
+                {
+                    Console.WriteLine("Некорректный ввод. Введите число от 1 до 6.");
+                }
             switch (key)
             {
                 case 1:
@@ -72,30 +80,34 @@
                     normal_mag.Train();
                     GoToMenu();
                     break;
-                default:
-                    Console.WriteLine("Такого мага нет!");
-                    GoToMenu();
-                    break;
             }
         }
         static void ShowAllMag()
         {
             Console.WriteLine("Список магов:");
-            Console.WriteLine("1. Огненный маг\n2. Деревянный маг\n3. Водяной маг\n4. Землянной маг\n5. Металлический маг\n6. Обычный маг");
+            int k = 0;
+            foreach (Element element in Enum.GetValues(typeof(Element)))
+            {
+                k++;
+                Console.WriteLine($"{k}. {mag.StrElement(element)}");
+            }
         }
         static void GoToMenu()
         {
             Console.WriteLine("Чтобы перейти в меню, нажмите любую клавишу");
             Console.ReadKey();
             Console.Clear();
-            Main();
         }
         static void ShowInfo()
         {
+            int key;
             Console.Clear();
             ShowAllMag();
             Console.WriteLine("Выберите, статы какого мага вы хотите посмотреть:");
-            int key = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out key) || key < 1 || key > 6)
+                {
+                    Console.WriteLine("Некорректный ввод. Введите число от 1 до 6.");
+                }
             switch (key)
             {
                 case 1:
@@ -122,10 +134,6 @@
                     normal_mag.ShowInfo();
                     GoToMenu();
                     break;
-                default:
-                    Console.WriteLine("Такого мага нет!");
-                    ShowInfo();
-                    break;
             }
         }
         static void ASCII_Battle()
@@ -141,36 +149,126 @@
         }
         static void Battle()
         {
+            static Mag CreateRandomMag()
+            {
+                int enemy = rand.Next(0, 6);
+                Mag mag = new Mag();
+                switch (enemy)
+                {
+                    case 0:
+                        mag = new Fire_Mag();
+                        break;
+                    case 1:
+                        mag = new Wood_Mag();
+                        break;
+                    case 2:
+                        mag = new Water_Mag();
+                        break;
+                    case 3:
+                        mag = new Dirt_Mag();
+                        break;
+                    case 4:
+                        mag = new Metal_Mag();
+                        break;
+                    case 5:
+                        mag = new Normal_Mag();
+                        break;
+                }
+                return mag;
+            }
+            static Mag[] ChooseMag()
+            {
+                static Mag Choose(int key)
+                {
+                    switch (key - 1)
+                    {
+                        case 0: return fire_mag;
+                        case 1: return wood_mag;
+                        case 2: return water_mag;
+                        case 3: return dirt_mag;
+                        case 4: return metal_mag;
+                        case 5: return normal_mag;
+                        default: return null;
+                    }
+                }
+                int key;
+                Mag m1 = null;
+                Mag m2 = null;
+                ShowAllMag();
+                Console.WriteLine("Выберите первого мага (1-6):");
+                while (!int.TryParse(Console.ReadLine(), out key) || key < 1 || key > 6)
+                {
+                    Console.WriteLine("Некорректный ввод. Введите число от 1 до 6.");
+                }
+                m1 = Choose(key);
+                Console.WriteLine("Выберите второго мага (1-6):");
+                while (true)
+                {
+                    while (!int.TryParse(Console.ReadLine(), out key) || key < 1 || key > 6)
+                    {
+                        Console.WriteLine("Некорректный ввод. Введите число от 1 до 6.");
+                    }
+                    m2 = Choose(key);
+                    if (m1 != m2)
+                        break; 
+                    Console.WriteLine("Нельзя выбрать магов одного типа. Перевыберите второго мага.");
+                }
+                Console.Clear();
+                return [m1, m2];
+            }
             static void NextMove()
             {
                 Console.WriteLine("Чтобы перейти к следующему ходу нажмите любую клавишу...");
                 Console.ReadLine();
+                Console.Clear();
+            }
+            static void ASCII_Battle_Start()
+            {
+                Console.Clear();
+                for (int i = 0; i < 4; i++)
+                {
+                    Console.ForegroundColor = (ConsoleColor)(i%2)+1;
+                    if (i % 2 == 0)
+                    {
+                        Console.WriteLine("########     ###    ######## ######## ##       ######## ");
+                        Console.WriteLine("##     ##   ## ##      ##       ##    ##       ## ");
+                        Console.WriteLine("##     ##  ##   ##     ##       ##    ##       ##   ");
+                        Console.WriteLine("########  ##     ##    ##       ##    ##       ########");
+                        Console.WriteLine("##     ## #########    ##       ##    ##       ## ");
+                        Console.WriteLine("##     ## ##     ##    ##       ##    ##       ##  ");
+                        Console.WriteLine("########  ##     ##    ##       ##    ######## ######## ");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" ######  ########    ###    ########  ######## ");
+                        Console.WriteLine("##    ##    ##      ## ##   ##     ##    ##    ");
+                        Console.WriteLine("##          ##     ##   ##  ##     ##    ##    ");
+                        Console.WriteLine(" ######     ##    ##     ## ########     ##    ");
+                        Console.WriteLine("      ##    ##    ######### ##   ##      ##    ");
+                        Console.WriteLine("##    ##    ##    ##     ## ##    ##     ##    ");
+                        Console.WriteLine(" ######     ##    ##     ## ##     ##    ##    ");                        
+                    }
+                    Thread.Sleep(700);
+                    Console.Clear();
+                    Console.ForegroundColor = (ConsoleColor)15;
+                }
+                Console.Clear();
             }
             static void ASCII_Win()
             {
-                Console.CursorVisible = false;
-                Console.Clear();
-                for (int i = 0; i < 15; i++)
-                {
-                    Console.ForegroundColor = (ConsoleColor)(i%2)+1;
-                    Console.WriteLine("##      ## #### ##    ## ");
-                    Console.WriteLine("##  ##  ##  ##  ###   ## ");
-                    Console.WriteLine("##  ##  ##  ##  ####  ## ");
-                    Console.WriteLine("##  ##  ##  ##  ## ## ## ");
-                    Console.WriteLine("##  ##  ##  ##  ##  #### ");
-                    Console.WriteLine("##  ##  ##  ##  ##   ### ");
-                    Console.WriteLine(" ###  ###  #### ##    ## ");
-                    Thread.Sleep(300);
-                    Console.Clear();
-                }
-                Console.Clear();
+                Console.ForegroundColor = (ConsoleColor)10;
+                Console.WriteLine("##      ## #### ##    ## ");
+                Console.WriteLine("##  ##  ##  ##  ###   ## ");
+                Console.WriteLine("##  ##  ##  ##  ####  ## ");
+                Console.WriteLine("##  ##  ##  ##  ## ## ## ");
+                Console.WriteLine("##  ##  ##  ##  ##  #### ");
+                Console.WriteLine("##  ##  ##  ##  ##   ### ");
+                Console.WriteLine(" ###  ###  #### ##    ## ");
                 Console.ForegroundColor = (ConsoleColor)15;
                 GoToMenu();
             }
             static void ASCII_Lose()
             {
-                Thread.Sleep(300);
-                Console.Clear();
                 Console.ForegroundColor = (ConsoleColor)4;
                 Console.WriteLine("##        #######   ######  ######## ");
                 Console.WriteLine("##       ##     ## ##    ## ##       ");
@@ -184,47 +282,94 @@
             }
             static void SpecAttack(Mag e1, Mag e2, Mag b1, Mag b2)
             {
-                Console.WriteLine($"Ваш {b1.Element} (первый) маг использует специальную способность");
+                Console.WriteLine($"Ваш {mag.StrElement(b1.Element)} первый маг использует специальную способность");
                 if (b1.KillsElement == e1.Element)
                 {
-                    Console.WriteLine($"Первый {e1.Element} вражеский маг убит");
+                    Console.WriteLine($"Первый {mag.StrElement(e1.Element)} вражеский маг убит\n");
                     e1.IsDeath = true;
                 }
                 else
                 {
-                    Console.WriteLine("Ваш маг не убил вражеского мага");
-                    Console.WriteLine($"Вражеский {e1.Element} (первый) маг использует специальную способность");
+                    Console.WriteLine("Ваш маг не убил вражеского мага\n");
+                    Console.WriteLine($"Вражеский {mag.StrElement(e1.Element)} первый маг использует специальную способность");
                     if (e1.KillsElement == b1.Element)
                     {
-                        Console.WriteLine($"Ваш первый {b1.Element} маг убит");
+                        Console.WriteLine($"Ваш первый {mag.StrElement(b1.Element)} маг убит\n");
                         b1.IsDeath = true;
                     }
                     else
                     {
-                        Console.WriteLine("Вражеский маг не убил вашего мага");
+                        Console.WriteLine("Вражеский маг не убил вашего мага\n");
                     }
                 }
-                Console.WriteLine($"Ваш {b2.Element} (второй) маг использует специальную способность");
+                Console.WriteLine($"Вражеский {mag.StrElement(e2.Element)} второй маг использует специальную способность");
                 if (e2.KillsElement == b2.Element)
                 {
-                    Console.WriteLine($"Второй {b2.Element} ваш маг убит");
+                    Console.WriteLine($"Второй {mag.StrElement(b2.Element)} ваш маг убит\n");
                     b2.IsDeath = true;
                 }
                 else
                 {
-                    Console.WriteLine("Вражеский маг не убил вашего мага");
-                    Console.WriteLine($"Ваш {b2.Element} (второй) маг использует специальную способность");
+                    Console.WriteLine("Вражеский маг не убил вашего мага\n");
+                    Console.WriteLine($"Ваш {mag.StrElement(b2.Element)} второй маг использует специальную способность");
                     if (b2.KillsElement == e2.Element)
                     {
-                        Console.WriteLine($"Ваш второй {b2.Element} маг убит");
+                        Console.WriteLine($"Вражеский второй {mag.StrElement(e2.Element)} маг убит\n");
                         b2.IsDeath = true;
                     }
                     else
                     {
-                        Console.WriteLine("Ваш маг не убил вражеского мага");
+                        Console.WriteLine("Ваш маг не убил вражеского мага\n");
                     }
                 }
+                CheckCommandIsDeath(e1, e2, b1, b2);
+                Console.WriteLine("Нажмите любую клавишу, чтобы продолжить...");
                 Console.ReadKey();
+            }
+            static void CheckCommandIsDeath(Mag e1, Mag e2, Mag b1, Mag b2)
+            {
+                if (e1.IsDeath && e2.IsDeath)
+                {
+                    ASCII_Win();
+                }
+                else if (b1.IsDeath && b2.IsDeath)
+                {
+                    ASCII_Lose();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            static void AttackMsg(Mag attacker, Mag defender, int who)
+            {
+                defender.Health -= attacker.Damage;
+                switch (who)
+                {
+                    case 1:
+                        
+                        if (defender.Health < 0 || defender.Health == 0)
+                        {
+                            defender.IsDeath = true;
+                            Console.WriteLine($"Ваш {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вражескому {mag.StrElement(defender.Element)} магу\n{mag.StrElement(defender.Element)} вражеский маг УБИТ!\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Ваш {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вражескому {mag.StrElement(defender.Element)} магу\nHP {mag.StrElement(defender.Element)} вражеского мага: {defender.Health}\n");
+                        }
+                        break;
+                    case 2:
+                        if (defender.Health < 0 || defender.Health == 0)
+                        {
+                            defender.IsDeath = true;
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\n{mag.StrElement(defender.Element)} ваш маг УБИТ!\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nHP {mag.StrElement(defender.Element)} вашего мага: {defender.Health}\n");
+                        }
+                        break;
+                }
             }
             static void Attack(Mag e1, Mag e2, Mag b1, Mag b2)
             {
@@ -234,159 +379,58 @@
                     {
                         if (!e1.IsDeath)
                         {
-                            e1.Health -= b1.Damage;
-                            if (e1.Health < 0 || e1.Health == 0)
-                            {
-                                e1.IsDeath = true;
-                                Console.WriteLine($"Ваш {b1.Element} первый маг использует навык {b1.AttackMessage} и наносит {b1.Damage} урона по вражескому {e1.Element} первому магу\nПЕРВЫЙ ВРАЖЕСКИЙ МАГ УБИТ!");
-                                if (e1.IsDeath && e2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Win();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Ваш {b1.Element} первый маг использует навык {b1.AttackMessage} и наносит {b1.Damage} урона по вражескому {e1.Element} первому магу\nHP первого злого мага: {e1.Health}");
-                            }
+                            AttackMsg(b1, e1, 1);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                         else if (!e2.IsDeath)
                         {
-                            e2.Health -= b2.Damage;
-                            if (e2.Health < 0 || e2.Health == 0)
-                            {
-                                e2.IsDeath = true;
-                                Console.WriteLine($"Ваш {b1.Element} первый маг использует навык {b1.AttackMessage} и наносит {b1.Damage} урона по вражескому {e2.Element} второму магу\nВТОРОЙ ВРАЖЕСКИЙ МАГ УБИТ!");
-                                if (e1.IsDeath && e2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Win();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Ваш {b1.Element} первый маг использует навык {b1.AttackMessage} и наносит {b1.Damage} урона по вражескому {e2.Element} второму магу\nHP второго злого мага: {e2.Health}");
-                            }
+                            AttackMsg(b1, e2, 1);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                     }
                     if (!b2.IsDeath)
                     {
                         if (!e2.IsDeath)
                         {
-                            e2.Health -= b2.Damage;
-                            if (e2.Health < 0 || e2.Health == 0)
-                            {
-                                e2.IsDeath = true;
-                                Console.WriteLine($"Ваш {b2.Element} второй маг использует навык {b2.AttackMessage} и наносит {b2.Damage} урона по вражескому {e2.Element} второму магу\nВТОРОЙ ВРАЖЕСКИЙ МАГ УБИТ!"); 
-                                if (e1.IsDeath && e2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Win();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Ваш {b2.Element} второй маг использует навык {b2.AttackMessage} и наносит {b2.Damage} урона по вражескому {e2.Element} второму магу\nHP второго злого мага: {e2.Health}");                            
-                            }
+                            AttackMsg(b2, e2, 1);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                         else if (!e1.IsDeath)
                         {
-                            e1.Health -= b2.Damage;
-                            if (e1.Health < 0 || e1.Health == 0)
-                            {
-                                e1.IsDeath = true;
-                                Console.WriteLine($"Ваш {b2.Element} второй маг использует навык {b2.AttackMessage} и наносит {b2.Damage} урона по вражескому {e1.Element} первому магу\nПЕРВЫЙ ВРАЖЕСКИЙ МАГ УБИТ!");
-                                if (e1.IsDeath && e2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Win();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Ваш {b2.Element} второй маг использует навык {b2.AttackMessage} и наносит {b2.Damage} урона по вражескому {e1.Element} первому магу\nHP первого злого мага: {e1.Health}");
-                            }
+                            AttackMsg(b2, e1, 1);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                     }
                     if (!e1.IsDeath)
                     {
                         if (!b1.IsDeath)
                         {
-                            b1.Health -= e1.Damage;
-                            if (b1.Health < 0 || b1.Health == 0)
-                            {
-                                b1.IsDeath = true;
-                                Console.WriteLine($"Вражеский {e1.Element} первый маг использует навык {e1.AttackMessage} и наносит {e1.Damage} урона по вашему {b1.Element} первому магу\nПЕРВЫЙ ВАШ МАГ УБИТ!");
-                                if (b1.IsDeath && b2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Lose();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Вражеский {e1.Element} первый маг использует навык {e1.AttackMessage} и наносит {e1.Damage} урона по вашему {b1.Element} первому магу\nHP первого вашего мага: {b1.Health}");
-                            }
+                            AttackMsg(e1, b1, 2);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                         else if (!b2.IsDeath)
                         {
-                            b2.Health -= e1.Damage;
-                            if (b2.Health < 0 || b2.Health == 0)
-                            {
-                                b2.IsDeath = true;
-                                Console.WriteLine($"Вражеский {e1.Element} первый маг использует навык {e1.AttackMessage} и наносит {e1.Damage} урона по вашему {b2.Element} второму магу\nВТОРОЙ ВАШ МАГ УБИТ!");
-                                if (b1.IsDeath && b2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Lose();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Вражеский {e1.Element} первый маг использует навык {e1.AttackMessage} и наносит {e1.Damage} урона по вашему {b2.Element} второму магу\nHP второго вашего мага: {b2.Health}");
-                            }
+                            AttackMsg(e1, b2, 2);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                     }
                     if (!e2.IsDeath)
                     {
                         if (!b2.IsDeath)
                         {
-                            b2.Health -= e2.Damage;
-                            if (b2.Health < 0 || b2.Health == 0)
-                            {
-                                b2.IsDeath = true;
-                                Console.WriteLine($"Вражеский {e2.Element} второй использует навык {e2.AttackMessage} и наносит {e2.Damage} урона по вашему {b2.Element} второму магу\nВТОРОЙ ВАШ МАГ УБИТ!");
-                                if (b1.IsDeath && b2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Lose();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Вражеский {e2.Element} второй использует навык {e2.AttackMessage} и наносит {e2.Damage} урона по вашему {b2.Element} второму магу\nHP второго вашего мага: {b2.Health}");
-                            }
+                            AttackMsg(e2, b2, 2);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                         else if (!b1.IsDeath)
                         {
-                            b1.Health -= e2.Damage;
-                            if (b1.Health < 0 || b1.Health == 0)
-                            {
-                                b1.IsDeath = true;
-                                Console.WriteLine($"Вражеский {e2.Element} второй использует навык {e2.AttackMessage} и наносит {e2.Damage} урона по вашему {b1.Element} первому магу\nПЕРВЫЙ ВАШ МАГ УБИТ!");
-                                if (b1.IsDeath && b2.IsDeath)
-                                {
-                                    Thread.Sleep(2000);
-                                    ASCII_Lose();
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine($"Вражеский {e2.Element} второй использует навык {e2.AttackMessage} и наносит {e2.Damage} урона по вашему {b1.Element} первому магу\nHP первого вашего мага: {b1.Health}");
-                            }
+                            AttackMsg(e2, b1, 2);
+                            CheckCommandIsDeath(e1, e2, b1, b2);
                         }
                     }
-                    NextMove();
+                    if ((!b1.IsDeath || !b2.IsDeath) && (!e1.IsDeath || !e2.IsDeath))
+                    {
+                        NextMove();
+                    }
                 }
             }
             static void InfoEnemy(Mag e1, Mag e2)
@@ -394,6 +438,7 @@
                 Console.WriteLine("Ваши противники:");
                 e1.ShowInfo();
                 e2.ShowInfo();
+                Console.WriteLine();
             }
             static void InfoBoec(Mag b1, Mag b2)
             {
@@ -401,144 +446,26 @@
                 b1.ShowInfo();
                 b2.ShowInfo();
             }
-            int key;
-            int f_enemy = rand.Next(0, 6);
-            int s_enemy = rand.Next(0, 6);
-            Mag enemy_1 = new Mag();
-            Mag enemy_2 = new Mag();
-            Mag boec_1 = new Mag();
-            Mag boec_2 = new Mag();
-            switch (f_enemy)
-            {
-                case 0:
-                    enemy_1 = new Fire_Mag();
-                    break;
-                case 1:
-                    enemy_1 = new Wood_Mag();
-                    break;
-                case 2:
-                    enemy_1 = new Water_Mag();
-                    break;
-                case 3:
-                    enemy_1 = new Dirt_Mag();
-                    break;
-                case 4:
-                    enemy_1 = new Metal_Mag();
-                    break;
-                case 5:
-                    enemy_1 = new Normal_Mag();
-                    break;
-            }
-            switch (s_enemy)
-            {
-                case 0:
-                    enemy_2 = new Fire_Mag();
-                    break;
-                case 1:
-                    enemy_2 = new Wood_Mag();
-                    break;
-                case 2:
-                    enemy_2 = new Water_Mag();
-                    break;
-                case 3:
-                    enemy_2 = new Dirt_Mag();
-                    break;
-                case 4:
-                    enemy_2 = new Metal_Mag();
-                    break;
-                case 5:
-                    enemy_2 = new Normal_Mag();
-                    break;
+            Mag enemy_1 = CreateRandomMag();
+            Mag enemy_2 = CreateRandomMag();
+            while (enemy_1.Element == enemy_2.Element){
+                enemy_2 = CreateRandomMag();
             }
             Console.Clear();
             InfoEnemy(enemy_1, enemy_2);
             Console.WriteLine("Выберите магов, которые будут биться с противниками");
-            ShowAllMag();
-            key = Convert.ToInt32(Console.ReadLine())-1;
-            switch (key)
-            {
-                case 0:
-                    boec_1 = fire_mag;
-                    break;
-                case 1:
-                    boec_1 = wood_mag;
-                    break;
-                case 2:
-                    boec_1 = water_mag;
-                    break;
-                case 3:
-                    boec_1 = dirt_mag;
-                    break;
-                case 4:
-                    boec_1 = metal_mag;
-                    break;
-                case 5:
-                    boec_1 = normal_mag;
-                    break;
-            }
-            Console.Clear();
-            InfoEnemy(enemy_1, enemy_2);
-            Console.WriteLine("Ваши бойцы:");
-            boec_1.ShowInfo();
-            ShowAllMag();
-            key = Convert.ToInt32(Console.ReadLine())-1;
-            switch (key)
-            {
-                case 0:
-                    boec_2 = fire_mag;
-                    break;
-                case 1:
-                    boec_2 = wood_mag;
-                    break;
-                case 2:
-                    boec_2 = water_mag;
-                    break;
-                case 3:
-                    boec_2 = dirt_mag;
-                    break;
-                case 4:
-                    boec_2 = metal_mag;
-                    break;
-                case 5:
-                    boec_2 = normal_mag;
-                    break;
-            }
+            Mag[] all_boici = ChooseMag();
+            Mag boec_1 = all_boici[0];
+            Mag boec_2 = all_boici[1];
             Console.Clear();
             InfoEnemy(enemy_1, enemy_2);
             InfoBoec(boec_1, boec_2);
-            Console.WriteLine("ДА НАЧНЕТСЯ БОЙ!");
-            Thread.Sleep(300);
-            Console.CursorVisible = false;
-            Console.Clear();
-            for (int i = 0; i < 10; i++)
-            {
-                Console.ForegroundColor = (ConsoleColor)(i%2)+1;
-                Console.WriteLine("########     ###    ######## ######## ##       ######## ");
-                Console.WriteLine("##     ##   ## ##      ##       ##    ##       ## ");
-                Console.WriteLine("##     ##  ##   ##     ##       ##    ##       ##   ");
-                Console.WriteLine("########  ##     ##    ##       ##    ##       ########");
-                Console.WriteLine("##     ## #########    ##       ##    ##       ## ");
-                Console.WriteLine("##     ## ##     ##    ##       ##    ##       ##  ");
-                Console.WriteLine("########  ##     ##    ##       ##    ######## ######## ");
-                Thread.Sleep(300);
-                Console.Clear();
-            }
-            Console.Clear();
-            Console.ForegroundColor = (ConsoleColor)15;
+            Console.WriteLine("Нажмите любую клавишу, чтобы начать битву...");
+            Console.ReadKey();
+            ASCII_Battle_Start();
             ASCII_Battle();
             SpecAttack(enemy_1, enemy_2, boec_1, boec_2);
-            if (boec_1.IsDeath && boec_2.IsDeath)
-            {
-                ASCII_Lose();
-            }
-            else if (enemy_1.IsDeath && enemy_2.IsDeath)
-            {
-                ASCII_Win();
-            }
-            else
-            {
-                Attack(enemy_1, enemy_2, boec_1, boec_2);           
-            }
+            Attack(enemy_1, enemy_2, boec_1, boec_2);           
         }  
     }
 }

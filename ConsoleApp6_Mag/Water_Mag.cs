@@ -9,7 +9,6 @@ public class Water_Mag : Mag
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Fire;
-    public override Element DeathElement{ get; init;} = Element.Dirt;
     public override void Train()
     {
         Train_Count += 1;
@@ -20,5 +19,9 @@ public class Water_Mag : Mag
     public override void ShowInfo()
     {
         base.ShowInfo();
+    }
+    public override string StrElement(Element element)
+    {
+        return base.StrElement(element);
     }
 }

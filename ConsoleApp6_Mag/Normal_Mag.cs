@@ -19,4 +19,8 @@ public class Normal_Mag : Mag
     {
         base.ShowInfo();
     }   
+    public override string StrElement(Element element)
+    {
+        return base.StrElement(element);
+    }
 }
