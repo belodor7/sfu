@@ -7,7 +7,6 @@ class Mag{
     public virtual int Train_Count{ get; set;}
     public virtual bool IsDeath{ get; set;}
     public virtual Element KillsElement{ get; init;}
-    public virtual Element DeathElement{ get; init;}
     public virtual void Train()
     {
         Damage *= 1.2;
@@ -28,7 +27,6 @@ class Fire_Mag : Mag
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Metal;
-    public override Element DeathElement{ get; init;} = Element.Water;
     public override void Train()
     {
         Train_Count += 1;
@@ -48,7 +46,6 @@ class Wood_Mag : Mag
     public override string AttackMessage{ get;} = "ЗАНОЗЫ";
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Dirt;
-    public override Element DeathElement{ get; init;} = Element.Metal;
     public override void Train()
     {
         Console.WriteLine("Деревянный маг не любит тренировки.");
@@ -67,7 +64,6 @@ class Water_Mag : Mag
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Fire;
-    public override Element DeathElement{ get; init;} = Element.Dirt;
     public override void Train()
     {
         Train_Count += 1;
@@ -89,7 +85,6 @@ class Dirt_Mag : Mag
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Water;
-    public override Element DeathElement{ get; init;} = Element.Wood;
     public override void Train()
     {
         Train_Count += 1;
@@ -111,7 +106,6 @@ class Metal_Mag : Mag
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
     public override Element KillsElement{ get; init;} = Element.Wood;
-    public override Element DeathElement{ get; init;} = Element.Fire;
     public override void Train()
     {
         Train_Count += 1;
@@ -155,6 +149,7 @@ class Program
     public static Normal_Mag normal_mag = new Normal_Mag();
     static void Main()
     {
+
         int key;
         while (true)
         {
@@ -331,8 +326,8 @@ class Program
             Console.WriteLine($"Ваш {b1.Element} (первый) маг использует специальную способность");
             if (b1.KillsElement == e1.Element)
             {
-                Console.WriteLine($"Первый {e1.Element} вражеский маг убит");
                 e1.IsDeath = true;
+                Console.WriteLine($"Первый {e1.Element} вражеский маг убит");
             }
             else
             {
@@ -340,19 +335,19 @@ class Program
                 Console.WriteLine($"Вражеский {e1.Element} (первый) маг использует специальную способность");
                 if (e1.KillsElement == b1.Element)
                 {
-                    Console.WriteLine($"Ваш первый {b1.Element} маг убит");
                     b1.IsDeath = true;
+                    Console.WriteLine($"Ваш первый {b1.Element} маг убит");
                 }
                 else
                 {
                     Console.WriteLine("Вражеский маг не убил вашего мага");
                 }
             }
-            Console.WriteLine($"Ваш {b2.Element} (второй) маг использует специальную способность");
+            Console.WriteLine($"Вражеский {e2.Element} (второй) маг использует специальную способность");
             if (e2.KillsElement == b2.Element)
             {
-                Console.WriteLine($"Второй {b2.Element} ваш маг убит");
                 b2.IsDeath = true;
+                Console.WriteLine($"Второй {b2.Element} ваш маг убит");
             }
             else
             {
@@ -360,7 +355,7 @@ class Program
                 Console.WriteLine($"Ваш {b2.Element} (второй) маг использует специальную способность");
                 if (b2.KillsElement == e2.Element)
                 {
-                    Console.WriteLine($"Ваш второй {b2.Element} маг убит");
+                    Console.WriteLine($"Вражеский второй {e2.Element} маг убит");
                     b2.IsDeath = true;
                 }
                 else
