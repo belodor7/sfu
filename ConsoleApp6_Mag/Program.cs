@@ -1,5 +1,5 @@
 ﻿namespace ConsoleApp6_Mag{
-    public enum Element{Fire, Wood, Water, Dirt, Metal, Normal}
+    public enum Element{Fire, Wood, Water, Dirt, Metal, Normal, Null}
     class Program
     {
         public static Random rand = new Random();
@@ -322,7 +322,6 @@
                         Console.WriteLine("Ваш маг не убил вражеского мага\n");
                     }
                 }
-                CheckCommandIsDeath(e1, e2, b1, b2);
                 Console.WriteLine("Нажмите любую клавишу, чтобы продолжить...");
                 Console.ReadKey();
             }
@@ -347,7 +346,6 @@
                 switch (who)
                 {
                     case 1:
-                        
                         if (defender.Health < 0 || defender.Health == 0)
                         {
                             defender.IsDeath = true;
