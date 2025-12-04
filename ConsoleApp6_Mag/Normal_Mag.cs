@@ -8,6 +8,7 @@ public class Normal_Mag : Mag
     public override string AttackMessage{ get;}  = "НОРМИСНЫЙ КРИК";
     public override int Train_Count{ get; set;} = 0;
     public override bool IsDeath{ get; set;} = false;
+    public override Element KillsElement { get; init;} = Element.Null;
     public override void Train()
     {
         Train_Count += 1;
