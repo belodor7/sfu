@@ -149,7 +149,7 @@ class Program
     public static Normal_Mag normal_mag = new Normal_Mag();
     static void Main()
     {
-
+        RegenMag();
         int key;
         while (true)
         {
@@ -170,6 +170,21 @@ class Program
                     return;
             }
         }
+    }
+    static void RegenMag()
+    {
+        fire_mag.Health = 100;
+        wood_mag.Health = 100;
+        water_mag.Health = 100;
+        dirt_mag.Health = 100;
+        metal_mag.Health = 100;
+        normal_mag.Health = 100;
+        fire_mag.IsDeath = false;
+        wood_mag.IsDeath = false;
+        water_mag.IsDeath = false;
+        metal_mag.IsDeath = false;
+        normal_mag.IsDeath = false;
+        dirt_mag.IsDeath = false;
     }
     static void Menu()
     {
