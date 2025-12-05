@@ -40,10 +40,10 @@
         {
             fire_mag.Health = 100;
             wood_mag.Health = 100;
-            water_mag.Health = 100;
-            dirt_mag.Health = 100;
-            metal_mag.Health = 100;
-            normal_mag.Health = 100;
+            water_mag.Health = 100 * Math.Pow(1.2, water_mag.Train_Count);
+            dirt_mag.Health = 100 * Math.Pow(1.33, dirt_mag.Train_Count);
+            metal_mag.Health = 100 * Math.Exp(metal_mag.Train_Count);
+            normal_mag.Health = 100 * Math.Pow(1.2, normal_mag.Train_Count);
             fire_mag.IsDeath = false;
             wood_mag.IsDeath = false;
             water_mag.IsDeath = false;
@@ -379,11 +379,11 @@
                         if (defender.Health < 0 || defender.Health == 0)
                         {
                             defender.IsDeath = true;
-                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\n{mag.StrElement(defender.Element)} ваш маг УБИТ!\n");
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nваш {mag.StrElement(defender.Element)} маг УБИТ!\n");
                         }
                         else
                         {
-                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nHP {mag.StrElement(defender.Element)} вашего мага: {defender.Health}\n");
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nHP вашего {mag.StrElement(defender.Element)} мага: {defender.Health}\n");
                         }
                         break;
                 }
