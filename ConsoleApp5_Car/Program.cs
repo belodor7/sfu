@@ -64,8 +64,8 @@ class Car
     }
     public void ChangeColor(string newColor)
     {
-        Color = color;
-        Console.WriteLine("Цвет машины изменен на " + color);
+        Color = newColor;
+        Console.WriteLine("Цвет машины изменен на " + newColor);
     }
     public void UpgradeCar(int newSpeed)
     {
