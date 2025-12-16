@@ -9,18 +9,24 @@ public class FactoryAF
     }
     public void SaleCar()
     {
-        foreach (var customer in customers)
+        var customersCopy = new List<Customer>(customers);
+        var carsCopy = new List<Car>(cars);
+        foreach (var customer in customersCopy)
         {
-            foreach (var car in cars)
+            if (!customers.Contains(customer)) continue;
+            foreach (var car in carsCopy)
             {
-                if (customer.car == car)
-                {
-                    cars.Remove(car);
-                    Console.WriteLine($"Клиент {customer.FIO} приобрел автомобиль с серийным номером {car.SerialNumber}");
-                    break;
-                }
+                if (!cars.Contains(car) || customer.car.Engine.PedalSize != car.Engine.PedalSize) continue;
+                cars.Remove(car);
+                customers.Remove(customer);
+                Console.WriteLine($"Клиент {customer.FIO} приобрел автомобиль с серийным номером {car.SerialNumber}");
+                break;
             }
-
+            if ((customers.Count == 0) && (cars.Count > 0))
+            {
+                Console.WriteLine($"Всем клиентам проданы автомобили.\nОставшиеся остатки ({cars.Count} шт.) на складе утилизируются.");
+                cars.Clear();
+            }
         }
     }
     public void AddCustomer(string FIO, int pedalSize)

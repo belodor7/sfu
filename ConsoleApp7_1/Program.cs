@@ -18,7 +18,10 @@ public class Program
         Console.WriteLine("3. Продать всем желающим клиентам автомобили");
         Console.WriteLine("4. Информация о фабрике");
         Console.WriteLine("Введите номер действия:");
-        choice = Convert.ToInt32(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 4)
+        {
+            Console.WriteLine("Некорректный ввод. Введите число от 1 до 4:");
+        }
         switch (choice)
         {
             case 1:
@@ -31,9 +34,13 @@ public class Program
                 Next();
                 break;
             case 2:
+                int pedalSizeCar;
                 Console.Clear();
                 Console.WriteLine("Введите размер педалей автомобиля, который необходимо произвести:");
-                int pedalSizeCar = Convert.ToInt32(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out pedalSizeCar))
+                {
+                    Console.WriteLine("Некорректный ввод.");
+                }
                 factoryAF.AddCar(pedalSizeCar);
                 Next();
                 break;
