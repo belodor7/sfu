@@ -5,7 +5,7 @@ public class Mag
     public virtual double Damage{ get; set;}
     public virtual double Health{ get; set;}
     public virtual Element Element{ get; init;}
-    public virtual string AttackMessage{ get;}
+    public virtual string AttackMessage{ get; } = "";
     public virtual int Train_Count{ get; set;}
     public virtual bool IsDeath{ get; set;}
     public virtual Element KillsElement{ get; init;}

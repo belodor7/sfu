@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp6_Mag{
+namespace ConsoleApp6_Mag{
     public enum Element{Fire, Wood, Water, Dirt, Metal, Normal, Null}
     class Program
     {
@@ -36,8 +36,24 @@
                 }
             }
         }
+        static void RegenMag()
+        {
+            fire_mag.Health = 100;
+            wood_mag.Health = 100;
+            water_mag.Health = 100 * Math.Pow(1.2, water_mag.Train_Count);
+            dirt_mag.Health = 100 * Math.Pow(1.33, dirt_mag.Train_Count);
+            metal_mag.Health = 100 * Math.Exp(metal_mag.Train_Count);
+            normal_mag.Health = 100 * Math.Pow(1.2, normal_mag.Train_Count);
+            fire_mag.IsDeath = false;
+            wood_mag.IsDeath = false;
+            water_mag.IsDeath = false;
+            metal_mag.IsDeath = false;
+            normal_mag.IsDeath = false;
+            dirt_mag.IsDeath = false;
+        }
         static void Menu()
         {
+            RegenMag();
             Console.Clear();
             Console.WriteLine("1. Посмотреть информацию о маге");
             Console.WriteLine("2. Тренировать мага");
@@ -89,6 +105,7 @@
             foreach (Element element in Enum.GetValues(typeof(Element)))
             {
                 k++;
+                if (k == 7) break;
                 Console.WriteLine($"{k}. {mag.StrElement(element)}");
             }
         }
@@ -219,7 +236,7 @@
             static void NextMove()
             {
                 Console.WriteLine("Чтобы перейти к следующему ходу нажмите любую клавишу...");
-                Console.ReadLine();
+                Console.ReadKey();
                 Console.Clear();
             }
             static void ASCII_Battle_Start()
@@ -315,7 +332,7 @@
                     if (b2.KillsElement == e2.Element)
                     {
                         Console.WriteLine($"Вражеский второй {mag.StrElement(e2.Element)} маг убит\n");
-                        b2.IsDeath = true;
+                        e2.IsDeath = true;
                     }
                     else
                     {
@@ -360,11 +377,11 @@
                         if (defender.Health < 0 || defender.Health == 0)
                         {
                             defender.IsDeath = true;
-                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\n{mag.StrElement(defender.Element)} ваш маг УБИТ!\n");
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nваш {mag.StrElement(defender.Element)} маг УБИТ!\n");
                         }
                         else
                         {
-                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nHP {mag.StrElement(defender.Element)} вашего мага: {defender.Health}\n");
+                            Console.WriteLine($"Вражеский {mag.StrElement(attacker.Element)} маг использует навык {attacker.AttackMessage} и наносит {attacker.Damage} урона по вашему {mag.StrElement(defender.Element)} магу\nHP вашего {mag.StrElement(defender.Element)} мага: {defender.Health}\n");
                         }
                         break;
                 }
@@ -463,7 +480,7 @@
             ASCII_Battle_Start();
             ASCII_Battle();
             SpecAttack(enemy_1, enemy_2, boec_1, boec_2);
-            Attack(enemy_1, enemy_2, boec_1, boec_2);           
+            Attack(enemy_1, enemy_2, boec_1, boec_2);
         }  
     }
 }
