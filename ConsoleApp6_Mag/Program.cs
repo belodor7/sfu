@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp6_Mag{
+namespace ConsoleApp6_Mag{
     public enum Element{Fire, Wood, Water, Dirt, Metal, Normal, Null}
     class Program
     {
