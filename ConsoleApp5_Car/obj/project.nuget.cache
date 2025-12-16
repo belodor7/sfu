@@ -1,14 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "LYF2m7TJTFg=",
   "success": true,
   "projectFilePath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
-=======
-  "dgSpecHash": "XcxI3PvNZrc=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\kuchm\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
->>>>>>> de35fa7b979842556753115de4a5805c005871f9
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Ошибка чтения файла кэша C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp5_Car\\obj\\project.nuget.cache: '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp5_Car\\ConsoleApp5_Car.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
