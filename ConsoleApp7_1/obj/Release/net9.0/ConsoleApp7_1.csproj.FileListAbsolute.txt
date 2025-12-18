@@ -1,0 +1,16 @@
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\bin\Release\net9.0\ConsoleApp7_1.exe
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\bin\Release\net9.0\ConsoleApp7_1.deps.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\bin\Release\net9.0\ConsoleApp7_1.runtimeconfig.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\bin\Release\net9.0\ConsoleApp7_1.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\bin\Release\net9.0\ConsoleApp7_1.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.AssemblyInfoInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.AssemblyInfo.cs
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.csproj.CoreCompileInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.sourcelink.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleA.88C9FBEE.Up2Date
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\refint\ConsoleApp7_1.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ConsoleApp7_1.genruntimeconfig.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp7_1\obj\Release\net9.0\ref\ConsoleApp7_1.dll

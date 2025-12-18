@@ -1,4 +1,4 @@
-﻿﻿namespace ConsoleApp7_1;
+﻿namespace ConsoleApp7_1;
 public class Program
 {
     public static FactoryAF factoryAF = new FactoryAF();

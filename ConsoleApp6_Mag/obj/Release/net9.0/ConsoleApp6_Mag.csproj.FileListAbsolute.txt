@@ -1,0 +1,16 @@
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\bin\Release\net9.0\ConsoleApp6_Mag.exe
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\bin\Release\net9.0\ConsoleApp6_Mag.deps.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\bin\Release\net9.0\ConsoleApp6_Mag.runtimeconfig.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\bin\Release\net9.0\ConsoleApp6_Mag.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\bin\Release\net9.0\ConsoleApp6_Mag.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.AssemblyInfoInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.AssemblyInfo.cs
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.csproj.CoreCompileInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.sourcelink.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleA.A9D19B91.Up2Date
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\refint\ConsoleApp6_Mag.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.genruntimeconfig.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ref\ConsoleApp6_Mag.dll
