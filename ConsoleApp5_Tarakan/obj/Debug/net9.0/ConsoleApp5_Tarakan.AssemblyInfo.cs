@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleApp5_Tarakan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de35fa7b979842556753115de4a5805c005871f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+042bc81896559ef44fcef781bd82a6e322059e09")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleApp5_Tarakan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleApp5_Tarakan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
