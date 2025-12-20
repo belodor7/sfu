@@ -54,6 +54,10 @@ class Program
                     AllDetails();
                     break;
                 case 9:
+                    factory.OTK();
+                    Next();
+                    break;
+                case 0:
                     return;
             }
         }
@@ -70,7 +74,8 @@ class Program
         Console.WriteLine("6. Список клиентов");
         Console.WriteLine("7. Список самокатов");
         Console.WriteLine("8. Список деталей");
-        Console.WriteLine("9. Выход");
+        Console.WriteLine("9. ОТК");
+        Console.WriteLine("0. Выход");
     }
     static void AddCustomer()
     {

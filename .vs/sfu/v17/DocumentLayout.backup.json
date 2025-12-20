@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kuchm\\sfu\\sfu\\",
+  "WorkspaceRootPath": "C:\\Users\\kuchm\\sfu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\sfu\\consoleapp7_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|c:\\users\\kuchm\\sfu\\consoleapp7\\factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|solutionrelative:consoleapp7\\factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|c:\\users\\kuchm\\sfu\\consoleapp7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|solutionrelative:consoleapp7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|c:\\users\\kuchm\\sfu\\consoleapp7\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|solutionrelative:consoleapp7\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|c:\\users\\kuchm\\sfu\\consoleapp7\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CCED61-EDE8-4C28-B3AD-E46394FF2C3C}|ConsoleApp7\\ConsoleApp7.csproj|solutionrelative:consoleapp7\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\consoleapp7_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\sfu\\consoleapp7_1\\factoryaf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\consoleapp7_1\\factoryaf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\factoryaf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\sfu\\consoleapp7_1\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\sfu\\consoleapp7_1\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\sfu\\consoleapp7_1\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\consoleapp7_1\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|c:\\users\\kuchm\\sfu\\consoleapp7_1\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6911FD0A-A34D-43DC-B8F6-AEC50A2D5D53}|ConsoleApp7_1\\ConsoleApp7_1.csproj|solutionrelative:consoleapp7_1\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +42,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Base.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Base.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7\\Base.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Base.cs",
+              "RelativeToolTip": "ConsoleApp7\\Base.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T02:42:32.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "enums.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\enums.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7\\enums.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\enums.cs",
+              "RelativeToolTip": "ConsoleApp7\\enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T02:41:45.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Factory.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Factory.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7\\Factory.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Factory.cs",
+              "RelativeToolTip": "ConsoleApp7\\Factory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T02:35:23.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7\\Program.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7\\Program.cs",
+              "RelativeToolTip": "ConsoleApp7\\Program.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAowCUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T02:35:11.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FactoryAF.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\FactoryAF.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7_1\\FactoryAF.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\FactoryAF.cs",
+              "RelativeToolTip": "ConsoleApp7_1\\FactoryAF.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T02:20:37.287Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp7_1\\Program.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp7_1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAwAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Customer.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7_1\\Customer.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Customer.cs",
+              "RelativeToolTip": "ConsoleApp7_1\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T09:53:03.11Z",
+              "WhenOpened": "2025-12-19T02:20:15.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FactoryAF.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\FactoryAF.cs",
-              "RelativeDocumentMoniker": "ConsoleApp7_1\\FactoryAF.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\FactoryAF.cs",
-              "RelativeToolTip": "ConsoleApp7_1\\FactoryAF.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Car.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7_1\\Car.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Car.cs",
+              "RelativeToolTip": "ConsoleApp7_1\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T09:46:08.077Z"
+              "WhenOpened": "2025-12-19T02:18:55.02Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Customer.cs",
-              "RelativeDocumentMoniker": "ConsoleApp7_1\\Customer.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Customer.cs",
-              "RelativeToolTip": "ConsoleApp7_1\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp7_1\\Program.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\ConsoleApp7_1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp7_1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T09:36:24.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Car.cs",
-              "RelativeDocumentMoniker": "ConsoleApp7_1\\Car.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Car.cs",
-              "RelativeToolTip": "ConsoleApp7_1\\Car.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T09:34:36.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Engine.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Engine.cs",
-              "RelativeDocumentMoniker": "ConsoleApp7_1\\Engine.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp7_1\\Engine.cs",
-              "RelativeToolTip": "ConsoleApp7_1\\Engine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T09:31:02.717Z"
+              "WhenOpened": "2025-12-19T02:18:11.281Z",
+              "EditorCaption": ""
             }
           ]
         }
