@@ -28,9 +28,9 @@ public class Samokat
     public virtual void PrintInfo()
     {
         Console.WriteLine($"Информация о самокате ID: {GetID()}");
-        Console.WriteLine($"Рама: {Base.Type}, Масса: {Base.Mass}, Цена: {Base.Cost}");
+        Console.WriteLine($"Рама: {Base.StrEnum(Base.Type)}, Масса: {Base.Mass}, Цена: {Base.Cost}");
         Console.WriteLine($"Двигатель: {Engine.Power} Вт, Масса: {Engine.Mass}, Цена: {Engine.Cost}");
-        Console.WriteLine($"Колеса: {Wheel.Type}, Масса: {Wheel.Mass}, Цена: {Wheel.Cost}");
+        Console.WriteLine($"Колеса: {Wheel.StrEnum(Wheel.Type)}, Масса: {Wheel.Mass}, Цена: {Wheel.Cost}");
         Console.WriteLine($"Аккумулятор: {Battery.Capacity} Вт/ч, Масса: {Battery.Mass}, Цена: {Battery.Cost}");
         Console.WriteLine($"Общая масса: {Mass} кг");
         Console.WriteLine($"Стоимость: {GetCost()} руб.");

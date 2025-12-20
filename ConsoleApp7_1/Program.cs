@@ -1,6 +1,8 @@
 ﻿namespace ConsoleApp7_1;
+
 public class Program
 {
+    public static List<Customer> customers = new List<Customer>();
     public static FactoryAF factoryAF = new FactoryAF();
     public static void Main(string[] args)
     {
@@ -25,11 +27,15 @@ public class Program
         switch (choice)
         {
             case 1:
+                int pedalSize;
                 Console.Clear();
                 Console.WriteLine("Введите ФИО клиента:");
                 string FIO = Console.ReadLine();
                 Console.WriteLine("Введите размер педалей автомобиля, который желает приобрести клиент:");
-                int pedalSize = Convert.ToInt32(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out pedalSize))
+                {
+                    Console.WriteLine("Некорректный ввод.");
+                }
                 factoryAF.AddCustomer(FIO, pedalSize);
                 Next();
                 break;

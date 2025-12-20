@@ -11,26 +11,7 @@ public class Factory
     private decimal losses = 0;
     private decimal profit = 0;
     private int soldSamokat = 0;
-    
-    public Factory()
-    {
-        InitializeDetails();
-    }
-    
-    private void InitializeDetails()
-    {
-        Engines.Add(new Engine(250, 10000, 7));
-        Engines.Add(new Engine(500, 13000, 10));
-        Engines.Add(new Engine(750, 14800, 15));
         
-        Wheels.Add(new Wheel(WheelType.Standard, 1000, 2));
-        Wheels.Add(new Wheel(WheelType.LightAlloy, 2000, 1));
-        Wheels.Add(new Wheel(WheelType.AllTerrain, 3000, 3));
-        
-        Batteries.Add(new Battery(1000, 3000, 3));
-        Batteries.Add(new Battery(2000, 4500, 5));
-    }
-    
     public void CreateDetails()
     {
         while (true)
@@ -429,54 +410,57 @@ public class Factory
 
     public void Sale(List<Customer> customers, List<Samokat> samokats)
     {
-        Samokat sm_for_sale = null;
+        Samokat sm_for_sale;
         foreach (var cu in customers) 
         {
             if (samokats.Count == 0) sm_for_sale = null;
-            switch (cu.Type)
+            else
             {
-                case CustomerType.Student:
-                    Samokat cheapest = samokats[0];
-                    foreach (var sm in samokats)
-                    {
-                        if (sm.GetCost() < cheapest.GetCost()) cheapest = sm;
-                    }
-                    sm_for_sale = cheapest;
-                    break;
-                case CustomerType.RichKid:
-                    Samokat mostExpensive = samokats[0];
-                    foreach (var sm in samokats)
-                    {
-                        if (sm.Wheel.Type == WheelType.LightAlloy && sm.GetCost() > mostExpensive.GetCost())  mostExpensive = sm;
-                    }
-                    sm_for_sale = mostExpensive;
-                    break;
-                case CustomerType.Weak:
-                    Samokat lightest = samokats[0];
-                    foreach (var sm in samokats)
-                    {
-                        if (sm.Mass <= 30 && sm.Mass < lightest.Mass) lightest = sm;
-                    }
-                    sm_for_sale = lightest;
-                    break;
-                case CustomerType.Courier:
-                    foreach (var sm in samokats)
-                    {
-                        if (sm.Wheel.Type == WheelType.AllTerrain) sm_for_sale = sm;
-                    }
-                    sm_for_sale = null;
-                    break;
-                case CustomerType.Racer:
-                    Samokat fastest = samokats[0];
-                    foreach (var sm in samokats)
-                    {
-                        if (sm.Speed > fastest.Speed) fastest = sm;
-                    }
-                    sm_for_sale = fastest;
-                    break;
-                default: 
-                    sm_for_sale = samokats[0];
-                    break;
+                switch (cu.Type)
+                {
+                    case CustomerType.Student:
+                        Samokat cheapest = samokats[0];
+                        foreach (var sm in samokats)
+                        {
+                            if (sm.GetCost() < cheapest.GetCost()) cheapest = sm;
+                        }
+                        sm_for_sale = cheapest;
+                        break;
+                    case CustomerType.RichKid:
+                        Samokat mostExpensive = samokats[0];
+                        foreach (var sm in samokats)
+                        {
+                            if (sm.Wheel.Type == WheelType.LightAlloy && sm.GetCost() > mostExpensive.GetCost()) mostExpensive = sm;
+                        }
+                        sm_for_sale = mostExpensive;
+                        break;
+                    case CustomerType.Weak:
+                        Samokat lightest = samokats[0];
+                        foreach (var sm in samokats)
+                        {
+                            if (sm.Mass <= 30 && sm.Mass < lightest.Mass) lightest = sm;
+                        }
+                        sm_for_sale = lightest;
+                        break;
+                    case CustomerType.Courier:
+                        foreach (var sm in samokats)
+                        {
+                            if (sm.Wheel.Type == WheelType.AllTerrain) sm_for_sale = sm;
+                        }
+                        sm_for_sale = null;
+                        break;
+                    case CustomerType.Racer:
+                        Samokat fastest = samokats[0];
+                        foreach (var sm in samokats)
+                        {
+                            if (sm.Speed > fastest.Speed) fastest = sm;
+                        }
+                        sm_for_sale = fastest;
+                        break;
+                    default:
+                        sm_for_sale = samokats[0];
+                        break;
+                }
             }
             if (sm_for_sale != null)
             {
