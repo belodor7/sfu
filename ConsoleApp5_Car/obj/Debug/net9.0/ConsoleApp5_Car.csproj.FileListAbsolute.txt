@@ -21,3 +21,13 @@ C:\Users\kuchm\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.pdb
 C:\Users\kuchm\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.genruntimeconfig.cache
 C:\Users\kuchm\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ref\ConsoleApp5_Car.dll
 >>>>>>> de35fa7b979842556753115de4a5805c005871f9
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Debug\net9.0\ConsoleApp5_Car.exe
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Debug\net9.0\ConsoleApp5_Car.deps.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Debug\net9.0\ConsoleApp5_Car.runtimeconfig.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Debug\net9.0\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Debug\net9.0\ConsoleApp5_Car.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\refint\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ConsoleApp5_Car.genruntimeconfig.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Debug\net9.0\ref\ConsoleApp5_Car.dll
