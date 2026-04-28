@@ -48,7 +48,7 @@ class Program
     static void Main(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        string filePath = "c:/users/kuchm/sfu/sfu/ЛАБЫ/dust.csv";
+        string filePath = "C:/Users/kuchm/sfu/ЛАБЫ/dust.csv";
         Dust[] dustArray = ReadCsvFile(filePath);      
         DustStatistic statistics = GetStatistic(dustArray);
 
