@@ -8,7 +8,6 @@ C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.Assemb
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.AssemblyInfo.cs
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.csproj.CoreCompileInputs.cache
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.sourcelink.json
-C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleA.A9D19B91.Up2Date
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.dll
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\refint\ConsoleApp6_Mag.dll
 C:\Users\kuchm\sfu\sfu\ConsoleApp6_Mag\obj\Release\net9.0\ConsoleApp6_Mag.pdb

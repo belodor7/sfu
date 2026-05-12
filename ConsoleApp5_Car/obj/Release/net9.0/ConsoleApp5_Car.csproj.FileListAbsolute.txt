@@ -1,0 +1,15 @@
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Release\net9.0\ConsoleApp5_Car.exe
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Release\net9.0\ConsoleApp5_Car.deps.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Release\net9.0\ConsoleApp5_Car.runtimeconfig.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Release\net9.0\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\bin\Release\net9.0\ConsoleApp5_Car.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.AssemblyInfoInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.AssemblyInfo.cs
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.csproj.CoreCompileInputs.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.sourcelink.json
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\refint\ConsoleApp5_Car.dll
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.pdb
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ConsoleApp5_Car.genruntimeconfig.cache
+C:\Users\kuchm\sfu\sfu\ConsoleApp5_Car\obj\Release\net9.0\ref\ConsoleApp5_Car.dll

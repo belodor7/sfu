@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace lab_5
+{
+ public class SettingsForm : Form
+ {
+ public List<double> Masses { get; private set; } = new List<double>();
+ public List<double> PositionsX { get; private set; } = new List<double>();
+ public List<double> PositionsY { get; private set; } = new List<double>();
+ public List<double> Vx { get; private set; } = new List<double>();
+ public List<double> Vy { get; private set; } = new List<double>();
+
+ List<TextBox> massBoxes = new List<TextBox>();
+ List<TextBox> xBoxes = new List<TextBox>();
+ List<TextBox> yBoxes = new List<TextBox>();
+ List<TextBox> vxBoxes = new List<TextBox>();
+ List<TextBox> vyBoxes = new List<TextBox>();
+
+ public SettingsForm(List<Body> bodies)
+ {
+ this.Text = "Настройки";
+ this.Size = new Size(420,320);
+ this.FormBorderStyle = FormBorderStyle.FixedDialog;
+ this.StartPosition = FormStartPosition.CenterParent;
+
+ var panel = new Panel { Dock = DockStyle.Fill, AutoScroll = true };
+ this.Controls.Add(panel);
+
+ int y =10;
+ for (int i =0; i < bodies.Count; i++)
+ {
+ var b = bodies[i];
+ var lbl = new Label { Text = $"Тело {i}", Location = new Point(10, y), Size = new Size(50,20) };
+ panel.Controls.Add(lbl);
+
+ var tbM = new TextBox { Text = b.Mass.ToString("F2"), Location = new Point(70, y), Width =60 };
+ var tbX = new TextBox { Text = b.X.ToString("F2"), Location = new Point(140, y), Width =60 };
+ var tbY = new TextBox { Text = b.Y.ToString("F2"), Location = new Point(210, y), Width =60 };
+ var tbVx = new TextBox { Text = b.Vx.ToString("F2"), Location = new Point(280, y), Width =50 };
+ var tbVy = new TextBox { Text = b.Vy.ToString("F2"), Location = new Point(340, y), Width =50 };
+ panel.Controls.AddRange(new Control[] { tbM, tbX, tbY, tbVx, tbVy });
+
+ massBoxes.Add(tbM);
+ xBoxes.Add(tbX);
+ yBoxes.Add(tbY);
+ vxBoxes.Add(tbVx);
+ vyBoxes.Add(tbVy);
+
+ y +=30;
+ }
+
+ var btnSave = new Button { Text = "Сохранить", Location = new Point(70, y +10) };
+ var btnCancel = new Button { Text = "Отменить", Location = new Point(170, y +10) };
+ panel.Controls.Add(btnSave);
+ panel.Controls.Add(btnCancel);
+
+ btnSave.Click += (s, e) =>
+ {
+ if (Parse()) { this.DialogResult = DialogResult.OK; this.Close(); }
+ };
+ btnCancel.Click += (s, e) => { this.DialogResult = DialogResult.Cancel; this.Close(); };
+ }
+
+ bool Parse()
+ {
+ Masses.Clear(); PositionsX.Clear(); PositionsY.Clear(); Vx.Clear(); Vy.Clear();
+ for (int i =0; i < massBoxes.Count; i++)
+ {
+ if (!double.TryParse(massBoxes[i].Text, out double m)) return false;
+ if (!double.TryParse(xBoxes[i].Text, out double x)) return false;
+ if (!double.TryParse(yBoxes[i].Text, out double y)) return false;
+ if (!double.TryParse(vxBoxes[i].Text, out double vx)) return false;
+ if (!double.TryParse(vyBoxes[i].Text, out double vy)) return false;
+ Masses.Add(m); PositionsX.Add(x); PositionsY.Add(y); Vx.Add(vx); Vy.Add(vy);
+ }
+ return true;
+ }
+ }
+}

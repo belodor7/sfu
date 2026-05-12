@@ -1,0 +1,312 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using System.Reflection;
+using Timer = System.Windows.Forms.Timer;
+
+namespace lab_5
+{
+    public partial class Form1 : Form
+    {
+        List<Body> bodies = new List<Body>();
+        List<List<PointF>> trails = new List<List<PointF>>();
+        Timer timer = new Timer();
+        double G = 1.0;
+        double dt = 0.05;
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            typeof(Panel).GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic)!.SetValue(panelScene, true);
+
+            for (int i = 2; i <= 10; i++)
+                comboBoxCount.Items.Add(i);
+            comboBoxCount.SelectedIndex = 0;
+
+            timer.Interval = 20;
+            timer.Tick += Timer_Tick;
+
+            panelScene.BackColor = Color.Black;
+            panelScene.Paint += PanelScene_Paint;
+            comboBoxCount.SelectedIndexChanged += ComboBoxCount_SelectedIndexChanged;
+
+            buttonStart.Click += (s, e) => timer.Start();
+            buttonStop.Click += ButtonStop_Click;
+            buttonSettings.Click += ButtonSettings_Click;
+
+            checkBoxTrails.Checked = true;
+            checkBoxTrails.CheckedChanged += CheckBoxTrails_CheckedChanged;
+
+            numericUpDownSpeed.ValueChanged += NumericUpDownSpeed_ValueChanged;
+
+            InitializeValues(3);
+        }
+
+        // helper clamp
+        private static double Clamp(double v, double min, double max) => Math.Max(min, Math.Min(max, v));
+
+        private void ButtonStop_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            foreach (var t in trails) t.Clear();
+            panelScene.Invalidate();
+        }
+
+        private void CheckBoxTrails_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxTrails.Checked)
+            {
+                foreach (var t in trails) t.Clear();
+                panelScene.Invalidate();
+            }
+        }
+
+        private void NumericUpDownSpeed_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBoxCount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int n = (int)comboBoxCount.Items[comboBoxCount.SelectedIndex];
+            InitializeValues(n);
+        }
+
+        private void ButtonSettings_Click(object sender, EventArgs e)
+        {
+            using (var f = new SettingsForm(bodies))
+            {
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    UpdateValuesFromSettings(f.Masses, f.PositionsX, f.PositionsY, f.Vx, f.Vy);
+                }
+            }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            int steps = Math.Max(1, (int)numericUpDownSpeed.Value);
+            for (int s = 0; s < steps; s++)
+            {
+                CalculateForces();
+                UpdatePositions();
+            }
+            DrawScene();
+        }
+
+        public void InitializeValues(int bodyCount)
+        {
+            bodies.Clear();
+            trails.Clear();
+            var rnd = new Random();
+            var w = panelScene.Width;
+            var h = panelScene.Height;
+
+            for (int i = 0; i < bodyCount; i++)
+            {
+                // random initial values: mass in [0,5], velocities in [-1,1]
+                var mass = rnd.NextDouble() * 5.0; // [0,5]
+                var vx = rnd.NextDouble() * 2.0 - 1.0; // [-1,1]
+                var vy = rnd.NextDouble() * 2.0 - 1.0; // [-1,1]
+
+                var b = new Body
+                {
+                    Mass = mass,
+                    X = rnd.NextDouble() * (w - 60) + 30,
+                    Y = rnd.NextDouble() * (h - 60) + 30,
+                    Vx = vx,
+                    Vy = vy,
+                    Color = Color.FromArgb(rnd.Next(100, 256), rnd.Next(100, 256), rnd.Next(100, 256))
+                };
+                bodies.Add(b);
+                var t = new List<PointF>();
+                t.Add(new PointF((float)b.X, (float)b.Y));
+                trails.Add(t);
+            }
+
+            panelScene.Invalidate();
+        }
+
+        public double Distance(double x1, double y1, double x2, double y2)
+        {
+            double dx = x2 - x1;
+            double dy = y2 - y1;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        public double ForceX(double distance, double x1, double x2, double m1, double m2)
+        {
+            if (distance == 0) return 0;
+            return G * m1 * m2 * (x2 - x1) / (distance * distance * distance);
+        }
+
+        public double ForceY(double distance, double y1, double y2, double m1, double m2)
+        {
+            if (distance == 0) return 0;
+            return G * m1 * m2 * (y2 - y1) / (distance * distance * distance);
+        }
+
+        public void CalculateForces()
+        {
+            foreach (var b in bodies)
+            {
+                b.Fx = 0;
+                b.Fy = 0;
+            }
+
+            for (int i = 0; i < bodies.Count; i++)
+            {
+                for (int j = i + 1; j < bodies.Count; j++)
+                {
+                    var bi = bodies[i];
+                    var bj = bodies[j];
+                    double d = Distance(bi.X, bi.Y, bj.X, bj.Y);
+
+                    if (d < 1) d = 1;
+
+                    double fx = ForceX(d, bi.X, bj.X, bi.Mass, bj.Mass);
+                    double fy = ForceY(d, bi.Y, bj.Y, bi.Mass, bj.Mass);
+
+                    bi.Fx += fx;
+                    bi.Fy += fy;
+
+                    bj.Fx -= fx;
+                    bj.Fy -= fy;
+                }
+            }
+        }
+
+        public void UpdatePositions()
+        {
+            for (int i = 0; i < bodies.Count; i++)
+            {
+                var b = bodies[i];
+
+                // protect against zero mass: if mass==0 treat acceleration as0 to avoid division by zero
+                double ax = b.Mass == 0 ? 0 : b.Fx / b.Mass;
+                double ay = b.Mass == 0 ? 0 : b.Fy / b.Mass;
+
+                b.Vx += ax * dt;
+                b.Vy += ay * dt;
+
+                b.X += b.Vx * dt;
+                b.Y += b.Vy * dt;
+
+                if (b.X < 0)
+                {
+                    b.X = 0;
+                    b.Vx = -b.Vx * 0.5;
+                }
+                if (b.Y < 0)
+                {
+                    b.Y = 0;
+                    b.Vy = -b.Vy * 0.5;
+                }
+                if (b.X > panelScene.Width)
+                {
+                    b.X = panelScene.Width;
+                    b.Vx = -b.Vx * 0.5;
+                }
+                if (b.Y > panelScene.Height)
+                {
+                    b.Y = panelScene.Height;
+                    b.Vy = -b.Vy * 0.5;
+                }
+
+                if (checkBoxTrails.Checked)
+                {
+                    var last = trails[i].Count > 0 ? trails[i][trails[i].Count - 1] : default;
+                    var nx = (float)b.X; var ny = (float)b.Y;
+                    if (trails[i].Count == 0 || Math.Abs(last.X - nx) > 0.2f || Math.Abs(last.Y - ny) > 0.2f)
+                    {
+                        trails[i].Add(new PointF(nx, ny));
+                    }
+                }
+                else
+                {
+                    trails[i].Clear();
+                }
+            }
+        }
+
+        public void DrawScene()
+        {
+            panelScene.Invalidate();
+        }
+
+        private void PanelScene_Paint(object sender, PaintEventArgs e)
+        {
+            var g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            for (int i = 0; i < trails.Count; i++)
+            {
+                var t = trails[i];
+                if (t.Count > 1)
+                {
+                    using (var pen = new Pen(Color.FromArgb(180, bodies[i].Color), 1))
+                    {
+                        g.DrawLines(pen, t.ToArray());
+                    }
+                }
+                else if (t.Count == 1)
+                {
+                    var p = t[0];
+                    using (var b = new SolidBrush(Color.FromArgb(180, bodies[i].Color)))
+                    {
+                        g.FillEllipse(b, p.X - 1.5f, p.Y - 1.5f, 3, 3);
+                    }
+                }
+            }
+
+            foreach (var b in bodies)
+            {
+                float r = (float)Math.Max(3, Math.Log(b.Mass + 1));
+                var rect = new RectangleF((float)b.X - r, (float)b.Y - r, r * 2, r * 2);
+                using (var brush = new SolidBrush(b.Color))
+                {
+                    g.FillEllipse(brush, rect);
+                }
+                using (var pen = new Pen(Color.White, 1))
+                {
+                    g.DrawEllipse(pen, rect);
+                }
+            }
+        }
+
+        public void UpdateValuesFromSettings(List<double> masses, List<double> posX, List<double> posY, List<double> vx, List<double> vy)
+        {
+            int n = Math.Min(Math.Min(masses.Count, posX.Count), Math.Min(posY.Count, Math.Min(vx.Count, vy.Count)));
+            bodies.Clear();
+            trails.Clear();
+            for (int i = 0; i < n; i++)
+            {
+                bodies.Add(new Body
+                {
+                    Mass = Clamp(masses[i], 0.1, 5.0),
+                    X = posX[i],
+                    Y = posY[i],
+                    Vx = Clamp(vx[i], -2.0, 2.0),
+                    Vy = Clamp(vy[i], -2.0, 2.0),
+                    Color = Color.FromArgb(200, 100 + (i * 30) % 155, 50 + (i * 40) % 205)
+                });
+                var t = new List<PointF> { new PointF((float)posX[i], (float)posY[i]) };
+                trails.Add(t);
+            }
+            panelScene.Invalidate();
+        }
+
+    }
+
+    public class Body
+    {
+         public double Mass;
+         public double X, Y;
+         public double Vx, Vy;
+         public double Fx, Fy;
+         public Color Color;
+    }
+}

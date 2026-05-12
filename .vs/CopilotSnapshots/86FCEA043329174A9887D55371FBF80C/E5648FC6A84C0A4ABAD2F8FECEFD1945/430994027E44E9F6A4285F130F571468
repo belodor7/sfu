@@ -1,0 +1,134 @@
+﻿namespace lab_5
+{
+ partial class Form1
+ {
+ private System.ComponentModel.IContainer components = null;
+ protected override void Dispose(bool disposing)
+ {
+ if (disposing && (components != null))
+ {
+ components.Dispose();
+ }
+ base.Dispose(disposing);
+ }
+
+ #region Windows Form Designer generated code
+ private void InitializeComponent()
+ {
+ this.components = new System.ComponentModel.Container();
+ this.panelScene = new DoubleBufferedPanel();
+ this.comboBoxCount = new System.Windows.Forms.ComboBox();
+ this.checkBoxTrails = new System.Windows.Forms.CheckBox();
+ this.buttonStart = new System.Windows.Forms.Button();
+ this.buttonStop = new System.Windows.Forms.Button();
+ this.buttonSettings = new System.Windows.Forms.Button();
+ this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
+ this.labelSpeed = new System.Windows.Forms.Label();
+ ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
+ this.SuspendLayout();
+ // 
+ // panelScene
+ // 
+ this.panelScene.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+ | System.Windows.Forms.AnchorStyles.Left)
+ | System.Windows.Forms.AnchorStyles.Right)));
+ this.panelScene.Location = new System.Drawing.Point(12,45);
+ this.panelScene.Name = "panelScene";
+ this.panelScene.Size = new System.Drawing.Size(760,400);
+ this.panelScene.TabIndex =0;
+ // 
+ // comboBoxCount
+ // 
+ this.comboBoxCount.FormattingEnabled = true;
+ this.comboBoxCount.Location = new System.Drawing.Point(12,12);
+ this.comboBoxCount.Name = "comboBoxCount";
+ this.comboBoxCount.Size = new System.Drawing.Size(60,23);
+ this.comboBoxCount.TabIndex =1;
+ // 
+ // checkBoxTrails
+ // 
+ this.checkBoxTrails.AutoSize = true;
+ this.checkBoxTrails.Location = new System.Drawing.Point(90,14);
+ this.checkBoxTrails.Name = "checkBoxTrails";
+ this.checkBoxTrails.Size = new System.Drawing.Size(112,19);
+ this.checkBoxTrails.TabIndex =2;
+ this.checkBoxTrails.Text = "Отображать траекторию";
+ this.checkBoxTrails.UseVisualStyleBackColor = true;
+ // 
+ // buttonStart
+ // 
+ this.buttonStart.Location = new System.Drawing.Point(220,10);
+ this.buttonStart.Name = "buttonStart";
+ this.buttonStart.Size = new System.Drawing.Size(75,23);
+ this.buttonStart.TabIndex =3;
+ this.buttonStart.Text = "Старт";
+ this.buttonStart.UseVisualStyleBackColor = true;
+ // 
+ // buttonStop
+ // 
+ this.buttonStop.Location = new System.Drawing.Point(300,10);
+ this.buttonStop.Name = "buttonStop";
+ this.buttonStop.Size = new System.Drawing.Size(75,23);
+ this.buttonStop.TabIndex =4;
+ this.buttonStop.Text = "Стоп";
+ this.buttonStop.UseVisualStyleBackColor = true;
+ // 
+ // buttonSettings
+ // 
+ this.buttonSettings.Location = new System.Drawing.Point(380,10);
+ this.buttonSettings.Name = "buttonSettings";
+ this.buttonSettings.Size = new System.Drawing.Size(75,23);
+ this.buttonSettings.TabIndex =5;
+ this.buttonSettings.Text = "Настройки";
+ this.buttonSettings.UseVisualStyleBackColor = true;
+ // 
+ // numericUpDownSpeed
+ // 
+ this.numericUpDownSpeed.Location = new System.Drawing.Point(480,11);
+ this.numericUpDownSpeed.Minimum = new decimal(new int[] {1,0,0,0});
+ this.numericUpDownSpeed.Maximum = new decimal(new int[] {20,0,0,0});
+ this.numericUpDownSpeed.Value = new decimal(new int[] {1,0,0,0});
+ this.numericUpDownSpeed.Name = "numericUpDownSpeed";
+ this.numericUpDownSpeed.Size = new System.Drawing.Size(50,23);
+ this.numericUpDownSpeed.TabIndex =6;
+ // 
+ // labelSpeed
+ // 
+ this.labelSpeed.AutoSize = true;
+ this.labelSpeed.Location = new System.Drawing.Point(440,14);
+ this.labelSpeed.Name = "labelSpeed";
+ this.labelSpeed.Size = new System.Drawing.Size(34,15);
+ this.labelSpeed.TabIndex =7;
+ this.labelSpeed.Text = "Speed";
+ // 
+ // Form1
+ // 
+ this.AutoScaleDimensions = new System.Drawing.SizeF(7F,15F);
+ this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+ this.ClientSize = new System.Drawing.Size(784,461);
+ this.Controls.Add(this.labelSpeed);
+ this.Controls.Add(this.numericUpDownSpeed);
+ this.Controls.Add(this.buttonSettings);
+ this.Controls.Add(this.buttonStop);
+ this.Controls.Add(this.buttonStart);
+ this.Controls.Add(this.checkBoxTrails);
+ this.Controls.Add(this.comboBoxCount);
+ this.Controls.Add(this.panelScene);
+ this.Name = "Form1";
+ this.Text = "Form1";
+ ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).EndInit();
+ this.ResumeLayout(false);
+ this.PerformLayout();
+ }
+ #endregion
+
+ private DoubleBufferedPanel panelScene;
+ private System.Windows.Forms.ComboBox comboBoxCount;
+ private System.Windows.Forms.CheckBox checkBoxTrails;
+ private System.Windows.Forms.Button buttonStart;
+ private System.Windows.Forms.Button buttonStop;
+ private System.Windows.Forms.Button buttonSettings;
+ private System.Windows.Forms.NumericUpDown numericUpDownSpeed;
+ private System.Windows.Forms.Label labelSpeed;
+ }
+}

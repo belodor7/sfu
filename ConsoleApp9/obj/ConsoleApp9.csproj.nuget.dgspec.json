@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kuchm\\sfu\\ConsoleApp9\\ConsoleApp9.csproj": {}
+    "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp9\\ConsoleApp9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kuchm\\sfu\\ConsoleApp9\\ConsoleApp9.csproj": {
+    "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp9\\ConsoleApp9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kuchm\\sfu\\ConsoleApp9\\ConsoleApp9.csproj",
+        "projectUniqueName": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp9\\ConsoleApp9.csproj",
         "projectName": "ConsoleApp9",
-        "projectPath": "C:\\Users\\kuchm\\sfu\\ConsoleApp9\\ConsoleApp9.csproj",
+        "projectPath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp9\\ConsoleApp9.csproj",
         "packagesPath": "C:\\Users\\kuchm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kuchm\\sfu\\ConsoleApp9\\obj\\",
+        "outputPath": "C:\\Users\\kuchm\\sfu\\sfu\\ConsoleApp9\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\kuchm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
