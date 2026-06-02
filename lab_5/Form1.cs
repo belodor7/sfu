@@ -45,7 +45,6 @@ namespace lab_5
             InitializeValues(3);
         }
 
-        // helper clamp
         private static double Clamp(double v, double min, double max) => Math.Max(min, Math.Min(max, v));
 
         private void ButtonStop_Click(object sender, EventArgs e)
@@ -107,10 +106,9 @@ namespace lab_5
 
             for (int i = 0; i < bodyCount; i++)
             {
-                // random initial values: mass in [0,5], velocities in [-1,1]
-                var mass = rnd.NextDouble() * 5.0 + 0.000001; // [0,5]
-                var vx = rnd.NextDouble() * 2.0 - 1.0; // [-1,1]
-                var vy = rnd.NextDouble() * 2.0 - 1.0; // [-1,1]
+                var mass = rnd.NextDouble() * 5.0 + 0.000001;
+                var vx = rnd.NextDouble() * 2.0 - 1.0; 
+                var vy = rnd.NextDouble() * 2.0 - 1.0; 
 
                 var b = new Body
                 {

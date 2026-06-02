@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\kuchm\\sfu\\sfu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|c:\\users\\kuchm\\sfu\\sfu\\lab_5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|solutionrelative:lab_5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65D6E421-6AAA-494C-9CAB-6D96195E8089}|semestr_2\\lab_7\\lab_7.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_7\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{65D6E421-6AAA-494C-9CAB-6D96195E8089}|semestr_2\\lab_7\\lab_7.csproj|solutionrelative:semestr_2\\lab_7\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|solutionrelative:lab_5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|c:\\users\\kuchm\\sfu\\sfu\\lab_5\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|solutionrelative:lab_5\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|solutionrelative:lab_5\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\lab_6.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\lab_6.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|c:\\users\\kuchm\\sfu\\sfu\\lab_5\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4351B01-6144-4E87-B693-85495F4D0A72}|lab_5\\lab_5.csproj|solutionrelative:lab_5\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|c:\\users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\models\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E76856-7BE6-4637-8FF8-350E05E1F95D}|semestr_2\\lab_6\\lab_6.csproj|solutionrelative:semestr_2\\lab_6\\models\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,73 +38,103 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.cs",
-              "RelativeDocumentMoniker": "lab_5\\Form1.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "lab_5\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T06:48:12.229Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\SettingsForm.cs",
-              "RelativeDocumentMoniker": "lab_5\\SettingsForm.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "lab_5\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T06:48:09.685Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.cs",
-              "RelativeDocumentMoniker": "lab_5\\Form1.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.cs",
-              "RelativeToolTip": "lab_5\\Form1.cs",
-              "ViewState": "AgIAAB4BAAAAAAAAAAAkwC0BAAAAAAAAAAAAAA==",
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_7\\Form1.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_7\\Form1.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_7\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "semestr_2\\lab_7\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T06:46:13.009Z",
+              "WhenOpened": "2026-06-02T17:57:18.582Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Director.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\Models\\Director.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\Models\\Director.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\Models\\Director.cs",
+              "RelativeToolTip": "semestr_2\\lab_6\\Models\\Director.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T17:48:05.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "lab_5\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\Form1.Designer.cs",
-              "RelativeToolTip": "lab_5\\Form1.Designer.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAowHMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\Models\\Movie.cs",
+              "RelativeToolTip": "semestr_2\\lab_6\\Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T06:46:53.215Z",
+              "WhenOpened": "2026-06-02T17:48:00.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SettingsForm.cs",
-              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\SettingsForm.cs",
-              "RelativeDocumentMoniker": "lab_5\\SettingsForm.cs",
-              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\lab_5\\SettingsForm.cs",
-              "RelativeToolTip": "lab_5\\SettingsForm.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAgwGMAAAAAAAAAAAAAAA==",
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "semestr_2\\lab_6\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAKBhwJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T06:46:32.931Z",
+              "WhenOpened": "2026-06-02T17:47:54.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "semestr_2\\lab_6\\ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T17:47:40.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\MainWindow.xaml.cs",
+              "RelativeToolTip": "semestr_2\\lab_6\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T17:44:49.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "lab_6",
+              "DocumentMoniker": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\lab_6.csproj",
+              "RelativeDocumentMoniker": "semestr_2\\lab_6\\lab_6.csproj",
+              "ToolTip": "C:\\Users\\kuchm\\sfu\\sfu\\semestr_2\\lab_6\\lab_6.csproj",
+              "RelativeToolTip": "semestr_2\\lab_6\\lab_6.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T17:44:51.954Z",
               "EditorCaption": ""
             }
           ]
